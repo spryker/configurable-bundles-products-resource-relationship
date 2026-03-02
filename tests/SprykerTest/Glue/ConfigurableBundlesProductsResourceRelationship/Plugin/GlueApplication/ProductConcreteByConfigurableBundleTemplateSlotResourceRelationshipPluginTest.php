@@ -66,9 +66,6 @@ class ProductConcreteByConfigurableBundleTemplateSlotResourceRelationshipPluginT
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testAddResourceRelationshipsWillAddProductConcreteResourcesWithNumericSkus(): void
     {
         // Arrange

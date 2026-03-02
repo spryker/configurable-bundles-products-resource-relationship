@@ -17,9 +17,6 @@ use Spryker\Glue\Kernel\AbstractFactory;
 
 class ConfigurableBundlesProductsResourceRelationshipFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Glue\ConfigurableBundlesProductsResourceRelationship\Processor\Expander\ProductConcreteExpanderInterface
-     */
     public function createProductConcreteExpander(): ProductConcreteExpanderInterface
     {
         return new ProductConcreteExpander(
@@ -28,25 +25,16 @@ class ConfigurableBundlesProductsResourceRelationshipFactory extends AbstractFac
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ConfigurableBundlesProductsResourceRelationship\Processor\Reader\ProductConcreteReaderInterface
-     */
     public function createProductConcreteReader(): ProductConcreteReaderInterface
     {
         return new ProductConcreteReader($this->getCatalogClient());
     }
 
-    /**
-     * @return \Spryker\Glue\ConfigurableBundlesProductsResourceRelationship\Dependency\RestApiResource\ConfigurableBundlesProductsResourceRelationshipToProductsRestApiResourceInterface
-     */
     public function getProductsRestApiResource(): ConfigurableBundlesProductsResourceRelationshipToProductsRestApiResourceInterface
     {
         return $this->getProvidedDependency(ConfigurableBundlesProductsResourceRelationshipDependencyProvider::RESOURCE_PRODUCTS_REST_API);
     }
 
-    /**
-     * @return \Spryker\Glue\ConfigurableBundlesProductsResourceRelationship\Dependency\RestApiResource\ConfigurableBundlesProductsResourceRelationshipToCatalogClientInterface
-     */
     public function getCatalogClient(): ConfigurableBundlesProductsResourceRelationshipToCatalogClientInterface
     {
         return $this->getProvidedDependency(ConfigurableBundlesProductsResourceRelationshipDependencyProvider::CLIENT_CATALOG);

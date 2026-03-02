@@ -44,9 +44,6 @@ class ProductConcreteReader implements ProductConcreteReaderInterface
      */
     protected $catalogClient;
 
-    /**
-     * @param \Spryker\Glue\ConfigurableBundlesProductsResourceRelationship\Dependency\RestApiResource\ConfigurableBundlesProductsResourceRelationshipToCatalogClientInterface $catalogClient
-     */
     public function __construct(ConfigurableBundlesProductsResourceRelationshipToCatalogClientInterface $catalogClient)
     {
         $this->catalogClient = $catalogClient;

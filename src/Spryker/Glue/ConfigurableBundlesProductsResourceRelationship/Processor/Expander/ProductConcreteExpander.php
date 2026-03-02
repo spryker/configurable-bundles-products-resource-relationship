@@ -24,10 +24,6 @@ class ProductConcreteExpander implements ProductConcreteExpanderInterface
      */
     protected $productsRestApiResource;
 
-    /**
-     * @param \Spryker\Glue\ConfigurableBundlesProductsResourceRelationship\Processor\Reader\ProductConcreteReaderInterface $productConcreteReader
-     * @param \Spryker\Glue\ConfigurableBundlesProductsResourceRelationship\Dependency\RestApiResource\ConfigurableBundlesProductsResourceRelationshipToProductsRestApiResourceInterface $productsRestApiResource
-     */
     public function __construct(
         ProductConcreteReaderInterface $productConcreteReader,
         ConfigurableBundlesProductsResourceRelationshipToProductsRestApiResourceInterface $productsRestApiResource

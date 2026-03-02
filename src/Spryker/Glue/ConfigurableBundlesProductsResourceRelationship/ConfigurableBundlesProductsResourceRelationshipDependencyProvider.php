@@ -27,11 +27,6 @@ class ConfigurableBundlesProductsResourceRelationshipDependencyProvider extends 
      */
     public const CLIENT_CATALOG = 'CLIENT_CATALOG';
 
-    /**
-     * @param \Spryker\Glue\Kernel\Container $container
-     *
-     * @return \Spryker\Glue\Kernel\Container
-     */
     public function provideDependencies(Container $container): Container
     {
         $container = parent::provideDependencies($container);
@@ -41,11 +36,6 @@ class ConfigurableBundlesProductsResourceRelationshipDependencyProvider extends 
         return $container;
     }
 
-    /**
-     * @param \Spryker\Glue\Kernel\Container $container
-     *
-     * @return \Spryker\Glue\Kernel\Container
-     */
     protected function addProductsRestApiResource(Container $container): Container
     {
         $container->set(static::RESOURCE_PRODUCTS_REST_API, function (Container $container) {
@@ -57,11 +47,6 @@ class ConfigurableBundlesProductsResourceRelationshipDependencyProvider extends 
         return $container;
     }
 
-    /**
-     * @param \Spryker\Glue\Kernel\Container $container
-     *
-     * @return \Spryker\Glue\Kernel\Container
-     */
     protected function addCatalogClient(Container $container): Container
     {
         $container->set(static::CLIENT_CATALOG, function (Container $container) {
