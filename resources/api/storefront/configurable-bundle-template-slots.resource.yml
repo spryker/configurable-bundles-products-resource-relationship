@@ -1,0 +1,8 @@
+resource:
+    name: ConfigurableBundleTemplateSlots
+    shortName: configurable-bundle-template-slots
+
+    includes:
+        - relationshipName: concrete-products
+          targetResource: ConcreteProducts
+          resolverClass: Spryker\Glue\ConfigurableBundlesProductsResourceRelationship\Api\Storefront\Relationship\ProductConcreteBySlotRelationshipResolver
